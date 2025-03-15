@@ -1,0 +1,21 @@
+@model thuchanhWeb.Models.Product
+<h2>Product Details</h2>
+<div>
+    <h4>Name: @Model.Name</h4>
+    <h4>Price: @Model.Price</h4>
+    <h4>Description: @Model.Description</h4>
+    <<h4>Main Image:</h4>
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <img src="@Model.ImageUrl" alt="@Model.Name" style="max-width: 200px;" />
+    }
+    <h4>Additional Images:</h4>
+    @if (Model.ImageUrls != null && Model.ImageUrls.Any())
+    {
+        @foreach (var imageUrl in Model.ImageUrls)
+        {
+            <img src="@imageUrl" alt="@Model.Name" style="max-width: 100px;" />
+        }
+    }
+</div>
+<a asp-action="Index">Back to List</a>
