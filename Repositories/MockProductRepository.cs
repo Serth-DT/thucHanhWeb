@@ -12,9 +12,10 @@ namespace thuchanhWeb.Repositories
             // Tạo một số dữ liệu mẫu
             _products = new List<Product>
                 {
-                     new Product { Id = 1, Name = "Laptop", Price = 1000,Description = "A high-end laptop"},
-                     new Product { Id = 2, Name = "Desktop", Price = 2000,Description = "A high-end pc"},
-                     new Product { Id = 3, Name = "Laptop", Price = 3000,Description = "A high-end laptop"},
+                     new Product { Id = 1, Name = "Laptop", Price = 1000,Description = "A high-end laptop", ImageUrl="https://cdn-i.vtcnews.vn/files/f2/2014/07/29/ban-chai-danh-rang-va-nhung-moi-hoa-0.jpg" },
+                     new Product { Id = 2, Name = "Desktop", Price = 2000,Description = "A high-end pc",ImageUrl="https://cdn-i.vtcnews.vn/files/f2/2014/07/29/ban-chai-danh-rang-va-nhung-moi-hoa-0.jpg"},
+                     new Product { Id = 3, Name = "Laptop", Price = 3000,Description = "A high-end laptop",ImageUrl="https://cdn-i.vtcnews.vn/files/f2/2014/07/29/ban-chai-danh-rang-va-nhung-moi-hoa-0.jpg"},
+                     new Product { Id = 4, Name = "Window", Price = 3000,Description = "A high-end laptop",ImageUrl="https://cdn-i.vtcnews.vn/files/f2/2014/07/29/ban-chai-danh-rang-va-nhung-moi-hoa-0.jpg"},
                     // Thêm các sản phẩm khác
                 };
         }

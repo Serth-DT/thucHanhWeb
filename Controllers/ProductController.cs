@@ -32,7 +32,6 @@ namespace thuchanhWeb.Controllers
                 {
                     product.ImageUrl = await SaveImage(imageUrl);
                 }
-
                 // 🟢 Kiểm tra và lưu danh sách ảnh
                 if (imageUrls != null && imageUrls.Count > 0)
                 {
@@ -42,7 +41,6 @@ namespace thuchanhWeb.Controllers
                         product.ImageUrls.Add(await SaveImage(file));
                     }
                 }
-
                 _productRepository.Add(product);
                 return RedirectToAction("Index");
             }
@@ -76,17 +74,35 @@ namespace thuchanhWeb.Controllers
             {
                 return NotFound();
             }
+            var categories = _categoryRepository.GetAllCategories();
+            ViewBag.Categories = new SelectList(categories, "Id", "Name", product.CategoryId);
             return View(product);
         }
-        // Process the product update
+        
         [HttpPost]
-        public IActionResult Update(Product product)
+        public async Task<IActionResult> Update(Product product, IFormFile? imageUrl, List<IFormFile>? imageUrls)
         {
             if (ModelState.IsValid)
             {
+                if (imageUrl != null)
+                {
+                    // Lưu hình ảnh đại diện mới
+                    product.ImageUrl = await SaveImage(imageUrl);
+                }
+                if (imageUrls != null && imageUrls.Count > 0)
+                {
+                    product.ImageUrls = new List<string>();
+                    foreach (var file in imageUrls)
+                    {
+                        // Lưu các hình ảnh khác mới
+                        product.ImageUrls.Add(await SaveImage(file));
+                    }
+                }
                 _productRepository.Update(product);
                 return RedirectToAction("Index");
             }
+            var categories = _categoryRepository.GetAllCategories();
+            ViewBag.Categories = new SelectList(categories, "Id", "Name", product.CategoryId);
             return View(product);
         }
         // Show the product delete confirmation

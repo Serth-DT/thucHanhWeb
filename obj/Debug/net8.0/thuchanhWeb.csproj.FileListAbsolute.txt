@@ -28,3 +28,4 @@ C:\Users\doand\OneDrive\Desktop\thuchanhWeb\obj\Debug\net8.0\refint\thuchanhWeb.
 C:\Users\doand\OneDrive\Desktop\thuchanhWeb\obj\Debug\net8.0\thuchanhWeb.pdb
 C:\Users\doand\OneDrive\Desktop\thuchanhWeb\obj\Debug\net8.0\thuchanhWeb.genruntimeconfig.cache
 C:\Users\doand\OneDrive\Desktop\thuchanhWeb\obj\Debug\net8.0\ref\thuchanhWeb.dll
+C:\Users\doand\OneDrive\Desktop\thuchanhWeb\obj\Debug\net8.0\thuchanhWeb.sourcelink.json
