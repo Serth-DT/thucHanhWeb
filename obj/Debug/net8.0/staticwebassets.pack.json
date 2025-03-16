@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\doand\\OneDrive\\Desktop\\thuchanhWeb\\wwwroot\\images\\133844331811522649.jpg",
+      "PackagePath": "staticwebassets\\images\\133844331811522649.jpg"
+    },
+    {
+      "Id": "C:\\Users\\doand\\OneDrive\\Desktop\\thuchanhWeb\\wwwroot\\images\\BTB3.png",
+      "PackagePath": "staticwebassets\\images\\BTB3.png"
+    },
+    {
+      "Id": "C:\\Users\\doand\\OneDrive\\Desktop\\thuchanhWeb\\wwwroot\\images\\image_3.jpg",
+      "PackagePath": "staticwebassets\\images\\image_3.jpg"
+    },
+    {
       "Id": "C:\\Users\\doand\\OneDrive\\Desktop\\thuchanhWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
